@@ -17,7 +17,7 @@ public class ItemService {
         this.itemRepository = itemRepository;
     }
 
-    public List<Item> getItem() {
+    public List<Item> all() {
         //TODO implement this method
         return itemRepository.findAll();
 //        return item;
@@ -30,11 +30,7 @@ public class ItemService {
 
     }
 
-//    public List<Item> findByName(String name) {
-//        return itemRepository.findByName(name);
-//    }
-
-    public Item addNewItem(Item item) {
+    public Item addItem(Item item) {
         return itemRepository.save(item);
     }
 
@@ -44,46 +40,5 @@ public class ItemService {
         itemRepository.deleteById(id);
 
     }
-
-
-
 }
 
-
-//    public List<Item> all()
-//    {
-//        //TODO implement this method
-//        List<Item> result = new ArrayList<>();
-//        itemRepository.findAll().forEach( result::add );
-//        return result;
-//    }
-
-
-
-
-//package org.generation.ItemsAPI.service;
-//
-//        import org.generation.ItemsAPI.repository.entity.Item;
-//
-//        import java.util.List;
-//
-//public interface ItemService
-//{
-//
-//    Item save( Item item );
-//
-//    void delete( int itemId );
-//
-//    List<Item> all();
-//
-//    Item findById( int itemId );
-//
-//}
-//    @PostMapping
-//    public Item save( @RequestBody ItemDto itemDto )
-//    {
-//        return itemService.save( new Item( itemDto ) );
-//    }
-//Item newItem = new Item(itemDto);
-//
-//System.out.println("New Item: " + newItem.getPrice() + newItem.getId() + newItem.getItemName());

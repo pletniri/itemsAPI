@@ -8,7 +8,9 @@ package com.example.itemsAPI.repository.entity;
     import jakarta.persistence.Id;
     import com.example.itemsAPI.repository.entity.Item;
 
-    @Entity
+    import java.util.Objects;
+
+@Entity
     public class Item
     {
 
@@ -75,6 +77,23 @@ package com.example.itemsAPI.repository.entity;
         public void setImageUrl( String imageUrl )
         {
             this.imageUrl = imageUrl;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+
+            if (this == o)
+                return true;
+            if (!(o instanceof Item))
+                return false;
+            Item item = (Item) o;
+            return Objects.equals(this.id, item.id) && Objects.equals(this.name, item.name)
+                    && Objects.equals(this.description, item.description);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(this.id, this.name, this.description);
         }
 
         @Override

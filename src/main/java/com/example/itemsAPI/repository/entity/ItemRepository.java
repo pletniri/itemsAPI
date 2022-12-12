@@ -15,6 +15,8 @@ public interface ItemRepository extends JpaRepository<Item, Integer>
     //should  I add methods here?
 
 //    List<Item> findByName(String name);
-//    @Query("select s from Item s where s.name = :name")
-//    List<Item> findByName(@Param("name") String name);
+
+// @Query("select s from Item s where s.name = :name")
+// List<Item> findByName(@Param("name") String name);
+
 }

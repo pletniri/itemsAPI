@@ -23,64 +23,42 @@ public class ItemController{
         this.itemService = itemService;
     }
 
-    @GetMapping("getItems/all")
-    public List<Item> getItems(){
-        return itemService.getItem();
+    @GetMapping("/all")
+    public Iterable<Item> getItems(){
+        return itemService.all();
     }
 
-    @GetMapping("findItemById/{id}")
-    public Optional<Item> findItemById(@PathVariable Integer id ){
+    @GetMapping("/{id}")
+    public Optional<Item> findItemById
+            (@PathVariable Integer id ){
         return itemService.findById( id );
     }
 
-//    @GetMapping("findItemByName/{name}")
-//    public List<Item> findByName(@PathVariable String name) { return itemService.findByName(name);}
-
-//    @RequestMapping(value = "/findByName/{name}", method = RequestMethod.GET)
-//    @ResponseBody
-//    public List<Item> findByName(@PathVariable String name, @PathVariable String rollNumber) {
-//        List<Item> itemResponse = (List<Item>) itemService.findByName(name);
-//        return itemResponse;
-//    }
-
-    @PostMapping("save/all")
+    @PostMapping
     public Item save( @RequestBody ItemDto itemDto )
     {
-        return itemService.addNewItem( new Item ( itemDto ) );
+        return itemService.addItem( new Item ( itemDto ) );
 
     }
 
 
-    @PutMapping( "addItem/{id}" )
-    public void addItem( @RequestBody ItemDto itemDto,
+    @PutMapping( "/{id}" )
+    public void update( @RequestBody ItemDto itemDto,
                         @PathVariable Integer id )
     {
         Item item = itemService.findById( id ).get();
         item.setName( itemDto.getName() );
         item.setDescription( itemDto.getDescription() );
         item.setImageUrl( itemDto.getImageUrl() );
-        itemService.addNewItem( item );
+        itemService.addItem( item );
+
     }
 
 
-    @DeleteMapping( "delete/{id}" )
+    @DeleteMapping( "/{id}" )
     public void delete( @PathVariable Integer id )
     {
         itemService.delete( id );
     }
 }
 
-//@RestController
-//@RequestMapping
-//public class StudentController {
-//
-//    @Autowired
-//    private StudentService studentService;
-//
-//    @GetMapping(path = "students")
-//    public List<Student> getStudents(){
-//        return studentService.getStudents();
-//    };
-//
-//
-//}
