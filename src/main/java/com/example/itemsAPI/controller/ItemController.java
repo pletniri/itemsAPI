@@ -23,17 +23,27 @@ public class ItemController{
         this.itemService = itemService;
     }
 
-    @GetMapping("/all")
+    @GetMapping("getItems/all")
     public List<Item> getItems(){
         return itemService.getItem();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("findItemById/{id}")
     public Optional<Item> findItemById(@PathVariable Integer id ){
         return itemService.findById( id );
     }
 
-    @PostMapping("/all")
+//    @GetMapping("findItemByName/{name}")
+//    public List<Item> findByName(@PathVariable String name) { return itemService.findByName(name);}
+
+//    @RequestMapping(value = "/findByName/{name}", method = RequestMethod.GET)
+//    @ResponseBody
+//    public List<Item> findByName(@PathVariable String name, @PathVariable String rollNumber) {
+//        List<Item> itemResponse = (List<Item>) itemService.findByName(name);
+//        return itemResponse;
+//    }
+
+    @PostMapping("save/all")
     public Item save( @RequestBody ItemDto itemDto )
     {
         return itemService.addNewItem( new Item ( itemDto ) );
@@ -41,7 +51,7 @@ public class ItemController{
     }
 
 
-    @PutMapping( "/{id}" )
+    @PutMapping( "addItem/{id}" )
     public void addItem( @RequestBody ItemDto itemDto,
                         @PathVariable Integer id )
     {
@@ -53,7 +63,7 @@ public class ItemController{
     }
 
 
-    @DeleteMapping( "/{id}" )
+    @DeleteMapping( "delete/{id}" )
     public void delete( @PathVariable Integer id )
     {
         itemService.delete( id );

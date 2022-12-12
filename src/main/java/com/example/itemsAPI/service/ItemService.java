@@ -30,6 +30,10 @@ public class ItemService {
 
     }
 
+//    public List<Item> findByName(String name) {
+//        return itemRepository.findByName(name);
+//    }
+
     public Item addNewItem(Item item) {
         return itemRepository.save(item);
     }
@@ -40,6 +44,8 @@ public class ItemService {
         itemRepository.deleteById(id);
 
     }
+
+
 
 }
 
