@@ -1,0 +1,176 @@
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* NAVIGATION CSS */
+.nav-search {
+  max-width: 80%;
+}
+
+.nav-logo {
+  width: 80%;
+  margin-right: -17rem;
+}
+
+.login-icon,
+.login-icon:link,
+.login-icon:active {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.login-icon_dropdown,
+.login-icon_dropdown:link,
+.login-icon_dropdown:active {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.cart {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+}
+
+.btn-info,
+.bg-info {
+  background-color: #1a85a2;
+  border-color: #1a85a2;
+}
+
+@media only screen and (min-width: 992px) {
+  .login-icon_dropdown {
+    display: none;
+  }
+  .cart-collapse {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .login-icon {
+    display: none;
+  }
+  .cart-expand {
+    display: none;
+  }
+}
+/* NAVIGATION CSS */
+
+/*Modal*/
+.social-icons {
+  color: #1a85a2;
+  font-size: 1.5rem;
+}
+/*Modal*/
+/* HOME CSS */
+
+/* HOME CSS */
+/* ABOUT CSS */
+.card-bg-head {
+  background-color: #f2efe1;
+}
+.card-bg-body_one {
+  background-color: #1a85a2;
+}
+
+.card-bg-body_two {
+  background-color: #75c18a;
+}
+
+.card-bg-body_three {
+  background-color: #b13ae3;
+}
+
+.card-bg-body_four {
+  background-color: #1a85a2;
+}
+/* ABOUT CSS */
+/* PRODUCTS/SHOP CSS */
+.search-input {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+
+.container{
+  width: 90%;
+  height: auto;
+  margin-bottom: -3px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0 1rem 0;
+  flex-wrap: wrap;
+}
+
+footer .links{
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 2;
+  justify-content: space-evenly;
+  
+}
+
+footer .links ul li{
+  font-size: 1rem;
+  padding: 0.2rem;
+  list-style: none;
+}
+
+footer .links ul li:hover{
+  cursor: pointer;
+}
+
+footer .links ul .heading{
+  font-weight: 700;
+  font-size: 1rem;
+  
+}
+
+footer .heading{
+  cursor: text;
+}
+
+
+footer .logo img{
+  width: 50%;
+  height: auto;
+  
+}
+
+footer .logo img:hover{
+  cursor: pointer;
+  
+}
+
+
+/* Product page */
+
+#topRightTitle {
+  border-left: 2px solid #D0D0D0;
+/* border-right: 5px solid #ff0000; */
+}
+
+#productDescription {
+  border-top: 2px solid #D0D0D0;
+border-bottom: 2px solid #D0D0D0;
+}
+
+#similarProducts {
+  border-top: 2px solid #D0D0D0;
+border-bottom: 2px solid #D0D0D0;
+}
+
+#productFooter {
+  border-top: 1px solid #D0D0D0;
+
+}

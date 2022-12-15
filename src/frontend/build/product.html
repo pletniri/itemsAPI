@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"      
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <title>Product</title>
+  </head>
+
+  <body>
+    <header class="header" style="min-height: 10vh">
+        <header class="header">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#"
+                  ><img
+                    class="nav-logo"
+                    src="./images/navLogoAlt.png"
+                    alt="company logo"
+                /></a>
+                <div class="d-flex gap-2">
+                  <div class="cart-collapse">
+                    <button class="btn btn-info mb-1 mx-2 text-white position-relative" type="submit">
+                      <span><ion-icon class="cart" name="cart"></ion-icon></span>
+                      Cart
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        0
+                        <span class="visually-hidden">cart items</span>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="d-flex gap-2 align-items-center">
+                    <a
+                      href="#staticBackdrop"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"
+                    >
+                      <ion-icon
+                        class="login-icon_dropdown mt-1"
+                        name="person"
+                      ></ion-icon>
+                    </a>
+                    <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasDarkNavbar"
+                      aria-controls="offcanvasDarkNavbar"
+                    >
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="offcanvas offcanvas-end text-bg-dark"
+                  tabindex="-1"
+                  id="offcanvasDarkNavbar"
+                  aria-labelledby="offcanvasDarkNavbarLabel"
+                >
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                      E-Shop
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close btn-close-white"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <form class="d-flex input-group" role="search">
+                      <input
+                        class="form-control nav-search"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                      />
+                      <button class="btn btn-info text-white" type="submit">
+                        Search
+                      </button>
+                    </form>
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active"
+                          aria-current="page"
+                          href="shop.html"
+                          >Home</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="indexShobana.html">Store</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Product</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="items.html">Items</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="item-form.html">Item-form</a>
+                      </li>
+                      
+                      
+                      <a
+                        href="#staticBackdrop"
+                        data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"
+                      >
+                        <ion-icon class="login-icon" name="person"></ion-icon>
+                      </a>
+                      <div class="cart-expand">
+                        <button
+                          class="btn btn-info d-flex gap-2 align-items-center mx-3 text-white position-relative"
+                          type="submit"
+                        >
+                          <span><ion-icon class="cart" name="cart"></ion-icon></span>
+                          Cart
+                          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                            <span class="visually-hidden">cart items</span>
+                          </span>
+                        </button>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+    </header>
+    <body style="min-height: 85vh">
+
+        <div class="container">
+            <div class="row mt-4 mb-4">
+                <div class="col"> 
+                    <div class="row mt-5 mb-4 border-right">
+                        <div class="col border-right" id="bigProductPicture">
+                            <img src="https://d1b3667xvzs6rz.cloudfront.net/2018/09/Product.jpg" alt="Product" width="400" height="400" class="border-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" id="firstSmallPicture">
+                            <img src="https://d1b3667xvzs6rz.cloudfront.net/2018/09/Product.jpg" alt="Product" width="100" height="100">
+                        </div>
+                        <div class="col" id="secondSmallPicture">
+                            <img src="https://d1b3667xvzs6rz.cloudfront.net/2018/09/Product.jpg" alt="Product" width="100" height="100">
+                        </div>
+                        <div class="col" id="thirdSmallPicture">
+                            <img src="https://d1b3667xvzs6rz.cloudfront.net/2018/09/Product.jpg" alt="Product" width="100" height="100">
+                        </div>
+                    </div>
+
+                </div>
+                 <div class="col border-left" id="topRightTitle"> 
+                    <div class="row mt-2 mb-4" id="productTitle">
+                        <div class="col">
+                        <h1>Product title</h1>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span>5 reviews</span>
+                        </div>
+                    </div>
+                    <div class="row mt-4 mb-4" id="priceDropDownMenu">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col"> <h3>$10</h3>
+                                </div>
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          Select Model
+                                        </a>
+                                      
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                          <a class="dropdown-item" href="#">Action</a>
+                                          <a class="dropdown-item" href="#">Another action</a>
+                                          <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                      </div>
+
+                                </div>
+                            </div>
+                           <div class="row mt-4 mb-5">
+                            <div class="col align-bottom" id="productDescription">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut eligendi tenetur itaque obcaecati illum excepturi incidunt libero repudiandae eaque tempore sunt animi praesentium architecto facilis recusandae, nisi nulla suscipit corporis maiores quae ipsum nobis eos. Accusamus, temporibus sit labore impedit neque dolorum adipisci explicabo quia asperiores alias, quisquam corrupti ea?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolores, aliquid vero earum adipisci architecto mollitia voluptatibus illum vel sunt, magni similique at voluptatem totam reiciendis voluptatum veritatis facilis! Alias, ipsam magni amet tenetur nesciunt voluptas repudiandae perspiciatis enim earum facilis dignissimos libero nihil? Provident perspiciatis necessitatibus minus! Culpa mollitia saepe, ipsam necessitatibus totam impedit at autem dolore ullam alias!
+
+                            </div>
+                           </div>  
+                           <div class="row mt-5 mb-4" id="button">
+                            <div class="col d-flex justify-content-center">
+                                <button type="button" class="btn btn-primary btn-lg">Add to cart</button>
+                            </div>
+                           </div>             
+                    
+    
+                </div>
+                </div>
+                </div>
+                </div>
+
+                <!-- similar products heading  -->
+
+        <div class="row mt-4 mb-4">
+            <div class="col" id="similarProducts">
+                <h1 class="text-center">Similar products</h1>
+            </div>
+        </div>
+        <div class="row mt-4 mb-4">
+
+            <!-- first card -->
+
+            <div class="col id="productName1">
+                <div class="card mb-3" style="max-width: 540px; height: 200px">
+                    <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img src="https://cdn.bestofsigns.com/media/catalog/product/resize/560/m/a/mailer-boxes-bb-02.jpg" class="card-img" alt="box">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">PRODUCT NAME</h5>
+                          <p class="card-text"><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span></p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+
+                  <!-- second card -->
+
+                <div class="col" id="productName2">
+                  <div class="card mb-3" style="max-width: 540px; height: 200px">
+                    <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img src="https://img.muji.net/img/item/4548076370888_1260.jpg" class="card-img" alt="box">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">PRODUCT NAME</h5>
+                          <p class="card-text"><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span></p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+
+                  <!-- third card  -->
+
+                <div class="col" id="productName2">
+                  <div class="card mb-3" style="max-width: 540px; height: 200px">
+                    <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img src="https://pics.clipartpng.com/Cardboard_Box_PNG_Clip_Art-2996.png" class="card-img" alt="box">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">PRODUCT NAME</h5>
+                          <p class="card-text"><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span></p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>               
+        </div>
+
+        <!-- reviews heading -->
+
+        <div class="row mt-2 mb-4">
+            <div class="col">
+                <h3 class="text-left">Reviews</h3>
+            </div>
+        </div>
+
+        <!-- reviews section -->
+        <!-- first review -->
+
+        <div class="row">
+            <div class="col-4">
+                <div class="card mb-3 border-0" style="max-width: 300px; max-height: 100px">
+                    <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img src="https://cdn.vectorstock.com/i/1000x1000/53/25/user-avatar-anonimus-sign-line-icon-vector-10805325.webp" class="card-img" alt="anonim">
+                      </div>
+                      <div class="col-md-8 border-0" class="border-0">
+                        <div class="card-body border-0">
+                          <h5 class="card-title">John Doe</h5>
+                          <p class="card-text">
+                            <p>November 4, 2022<p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span><br>
+                            <span>5 reviews</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-8" id="reviewOne">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto consequatur distinctio tenetur dolor officiis magni, fuga natus, beatae sequi harum fugit quibusdam recusandae quis blanditiis quae labore corrupti sint doloribus minima ut consequuntur expedita. Consectetur, aspernatur ab. Quas inventore quasi, facere fugit ab reiciendis error corrupti! Quo perferendis animi cumque.
+            </div>
+        </div>
+
+        <!-- second review -->
+
+        <div class="row mt-4 mb-5">
+            <div class="col-4">
+                <div class="card mb-3 border-0" style="max-width: 300px; max-height: 100px">
+                    <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img src="https://cdn.vectorstock.com/i/1000x1000/53/25/user-avatar-anonimus-sign-line-icon-vector-10805325.webp" class="card-img" alt="anonim">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">John Doe</h5>
+                          <p class="card-text">
+                            <p>November 4, 2022<p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span><br>
+                            <span>5 reviews</span>
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-8" id="reviewOne">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto consequatur distinctio tenetur dolor officiis magni, fuga natus, beatae sequi harum fugit quibusdam recusandae quis blanditiis quae labore corrupti sint doloribus minima ut consequuntur expedita. Consectetur, aspernatur ab. Quas inventore quasi, facere fugit ab reiciendis error corrupti! Quo perferendis animi cumque.
+            </div>
+        </div>
+        </div>
+
+
+        <!-- footer -->
+
+    
+    <footer style="min-height: 5vh, align-bottom" id="productFooter">
+        <div class="container align-bottom">
+          <!-- <div class="logo">
+            <img src="images/logo.png" alt="Footer logo" width="10" height="10">
+          </div> -->
+          <div class="links">
+            <div class="main menu">
+                <ul>
+                  <li class="heading">MAIN MENU</li>
+                  <li>About</li>
+                  <li>Shop</li>
+                  <li>My Cart</li>
+                </ul>
+            </div>
+            <div class="company">
+              <ul>
+                <li class="heading">COMPANY</li>
+                <li>Help</li>
+                <li>Our Services</li>
+                <li>Find A Store</li>
+              </ul>
+            </div>
+            <div class="Social">
+              <ul>
+                  <li class="heading">SOCIAL</li>
+                  <li>Facebook</li>
+                  <li>Twitter</li>
+                  <li>Instagram</li>
+                  
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copyright border-top 5">
+          <p  class="fw-light" style="text-align:center">&copy:Generation-Final-Project-tekas-team-1</p>
+        </div>
+    </footer>
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+     crossorigin="anonymous"
+   ></script>
+   <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script> -->
+    <script  src="./js/itemsController.js"></script>
+    <script  src="./js/index.js"></script>
+    <script  src="js/items.js"></script>
+   
+    
+   
+  </body>
+</html>
