@@ -16,17 +16,15 @@ export default class ItemsController {
     };
 
     this.items.push(item);
-
-    localStorage.setItem('items', JSON.stringify(this.items));
-
-    this.save({name, description, imageUrl});    
+    this.save({name, description, imageUrl});
+       
 }
 
 save({name, description, imageUrl}){
     const data = { name,  description, imageUrl };
 
     fetch('http://localhost:8080/item', {
-    method: 'POST', // or 'PUT'
+    method: 'POST', 
     headers: {
         'Content-Type': 'application/json',
     },
@@ -41,7 +39,10 @@ save({name, description, imageUrl}){
     });
 }
 
-save({name, description, imageUrl}){
+
+
+
+update({name, description, imageUrl}){
     const data = { name,  description, imageUrl };
 
     fetch('http://localhost:8080/item', {
@@ -83,8 +84,8 @@ save({name, description, imageUrl}){
   };
 
 
-    async delete (id) {
-    const urlToFetch = `http://localhost:8080/item/id`;
+    async delete ({id}) {
+    const urlToFetch = `http://localhost:8080/item` + id;
     try {
       const response = await fetch(urlToFetch, {
         method: "DELETE",
@@ -100,6 +101,16 @@ save({name, description, imageUrl}){
     }
   };
 
+    saveItemsToLocalStorage() {
+        if(!localStorage.getItem("items")) {
+            localStorage.setItem("items", JSON.stringify(this.items));
+        } else {
+            const localStorageAgain = JSON.parse(localStorage.getItem("item"));
+            localStorageAgain.push(this.items[this.items.length - 1]);
+            localStorage.setItem('items', JSON.stringify(this.items)); 
+        }
+    }
+
    loadItemsFromLocalStorage() {
     const storageItems = localStorage.getItem('items')
     if (storageItems) {
@@ -112,14 +123,14 @@ save({name, description, imageUrl}){
   }
 }
 
-const controller = new ItemsController();
+// const controller = new ItemsController();
 // controller.name = 'car';
 // controller.description = 'blue';
 // controller.imageUrl = 'https://www.pexels.com/photo/blue-bmw-sedan-near-green-lawn-grass-170811/';
 
-controller.addItem("car", "blue", "https://www.pexels.com/photo/blue-bmw-sedan-near-green-lawn-grass-170811/");
-controller.items.push("car", "blue", "https://www.pexels.com/photo");
+// controller.addItem("car", "blue", "https://www.pexels.com/photo/blue-bmw-sedan-near-green-lawn-grass-170811/");
+// controller.items.push("car", "blue", "https://www.pexels.com/photo");
 
 
-console.log(controller);
-console.log(controller.items);
+// console.log(controller);
+// console.log(controller.items);

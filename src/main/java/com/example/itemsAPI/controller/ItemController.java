@@ -5,9 +5,12 @@ import com.example.itemsAPI.repository.entity.Item;
 //import com.example.itemsAPI.service.ItemNotFoundException;
 import com.example.itemsAPI.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,6 +20,7 @@ import static org.springframework.hateoas.server.reactive.WebFluxLinkBuilder.lin
 import static org.springframework.hateoas.server.reactive.WebFluxLinkBuilder.methodOn;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/item")
 public class ItemController{
 
@@ -32,6 +36,16 @@ public class ItemController{
         this.itemService = itemService;
 //        this.assembler = assembler;
     }
+
+    @Configuration
+    public class WebConfig implements WebMvcConfigurer {
+        @Override
+        public void addCorsMappings(CorsRegistry registry) {
+            registry.addMapping("/**")
+                    .allowedOrigins("http://localhost:8080");
+        }
+    }
+
     @CrossOrigin("*")
     @GetMapping("/all")
     public Iterable<Item> getItems(){

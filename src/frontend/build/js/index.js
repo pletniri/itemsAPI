@@ -26,9 +26,10 @@ newItemForm.addEventListener('submit', (event) => {
 
     //Add the item to the itemscontroller array 
     itemsController.addItem(name, description, imageUrl);
+    itemsController.save(name, description, imageUrl);
     itemsController.update(name, description, imageUrl);  
     itemsController.getItems(); 
-    itemsController.delete(id);
+    itemsController.delete({id});
 
     // itemsController.saveItemToLocalStorage();
     itemsController.loadItemsFromLocalStorage();
@@ -57,14 +58,14 @@ function addItemCard(item) {
     itemsContainer.innerHTML += itemHTML;
 }
 
-addItemCard({
-    'name': 'juice',
-    'img': 'https://www.gs1india.org/media/Juice_pack.jpg',
-    'description': 'Orange and Apple juice fresh and delicious'
-});
+// addItemCard({
+//     'name': 'juice',
+//     'img': 'https://www.gs1india.org/media/Juice_pack.jpg',
+//     'description': 'Orange and Apple juice fresh and delicious'
+// });
 
-addItemCard({
-    'name': 'Tayto',
-    'img': 'https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg',
-    'description': 'Cheese & Onion Chips'
-})
+// addItemCard({
+//     'name': 'Tayto',
+//     'img': 'https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg',
+//     'description': 'Cheese & Onion Chips'
+// })
