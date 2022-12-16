@@ -9,9 +9,10 @@ Also, you can find a page where you can upload products to the store database.
 ##  TO BUILD THE APPLICATION WE USED
 -HTML
 -CSS
--BootStrap: to build a structure of every page
--MySQL: to create a persistent database to store items
--Java
+-BootStrap: makes it easy to satisfy all specification's requirements
+- JavaScript:
+-MySQL: to create a persistent relational database to store items in a predefined manner
+-Java: to create an independently running application
 -SpringBoot: to connect java and MySQL files with frontend
 
 
