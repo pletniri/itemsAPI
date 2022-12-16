@@ -26,15 +26,19 @@ newItemForm.addEventListener('submit', (event) => {
 
     //Add the item to the itemscontroller array 
     itemsController.addItem(name, description, imageUrl);
-    itemsController.saveItemToLocalStorage();
+    itemsController.update(name, description, imageUrl);  
+    itemsController.getItems(); 
+    itemsController.delete(id);
+
+    // itemsController.saveItemToLocalStorage();
     itemsController.loadItemsFromLocalStorage();
     console.log(itemsController.items);
 
     //clear the form fields
     newItemName.value = '';
     newItemDescription.value = '';
-    imageUrl.value = '';
-    window.location.href = "../product.html";
+    newItemImageUrl.value = '';
+    window.location.href = "../item-form.html";
 
 });
 
