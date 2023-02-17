@@ -1,4 +1,4 @@
-package com.example.itemsAPI.controller;
+```package com.example.itemsAPI.controller;
 
 import com.example.itemsAPI.controller.dto.ItemDto;
 import com.example.itemsAPI.repository.entity.Item;
@@ -112,5 +112,6 @@ public class ItemController{
     {
         itemService.delete( id );
     }
-}
+}```
+
 
